@@ -53,7 +53,8 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    width: 100%;
+  margin-right: none !important;
+  margin-left: none !important;
   background: #0d0d0d;
   display: flex !important;
   flex-direction: row;
