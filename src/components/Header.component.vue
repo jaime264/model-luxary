@@ -45,7 +45,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header{
     width: 100%;
     background: #0d0d0d;
