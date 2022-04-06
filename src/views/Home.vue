@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
-    <Card v-for="(model,$index) in models" :key="$index" :model="model"/>
-  </div>
+  <div class="home"> 
+    <masonry-wall :items="models" :ssr-columns="1" :column-width="288.48" :gap="10">
+      <template #default="{ item }">
+        <Card :model="item"/>
+      </template>
+    </masonry-wall>
+  </div>  
 </template>
 
 <script>
@@ -11,11 +15,11 @@ import { mapActions } from 'vuex'
 export default {
   name: "HomeView",
   components: {
-    Card,
+    Card
   },
   data(){
     return {
-      models: []
+      models: [],
     }
   },
   methods: {
