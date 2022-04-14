@@ -29,7 +29,6 @@ export default {
 }
 .main{
   width: 100%;
-  padding: 50px;
-  background: url(https://luxarymodels.com/assets/images/pad.png) 0px 0px repeat fixed rgba(0, 0, 0, 0);
+  background: #1a1a1a;
 }
 </style>
