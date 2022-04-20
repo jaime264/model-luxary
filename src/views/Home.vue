@@ -171,8 +171,8 @@
 </template>
 
 <script>
-import CardSlide from "@/components/card-slide.component.vue";
-import CardModel from "@/components/card-model.component.vue";
+import CardSlide from "@/components/cardSlide.component.vue";
+import CardModel from "@/components/cardModel.component.vue";
 
 import Categories from "@/assets/json/categorias.json";
 import SlideModels from "@/assets/json/slide-models.json";
