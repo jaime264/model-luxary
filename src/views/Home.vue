@@ -1,10 +1,23 @@
 <template>
   <div>
     <div class="container mx-auto">
-      <h1 class="text-white text-3xl sm:text-4xl font-bold mb-6 pt-1.5 ms:pt-3.5">FEATURED MODELS</h1>
-      <p class="text-justify sm:text-center text-gray-400 text-base sm:text-xl m-5"
-        >Our hand picked featured models are sure to provide the ultimate experience to fulfill your desires and fantasies</p
+      <h1
+        class="text-white text-3xl sm:text-4xl font-bold mb-6 pt-1.5 ms:pt-3.5"
       >
+        FEATURED MODELS
+      </h1>
+      <p
+        class="
+          text-justify
+          sm:text-center
+          text-gray-400 text-base
+          sm:text-xl
+          m-5
+        "
+      >
+        Our hand picked featured models are sure to provide the ultimate
+        experience to fulfill your desires and fantasies
+      </p>
       <div>
         <div
           class="
@@ -115,11 +128,21 @@
     </div>
     <div class="container mx-auto">
       <h1 class="text-white text-3xl mt-4 mb-6">Available Models</h1>
-      <p class="text-gray-400 text-lg	m-6 text-justify sm:text-center"
-        >Search our listings for a model that will satisfy your needs. Online
-        model booking is also available for incall and outcall services.</p
+      <p class="text-gray-400 text-lg m-6 text-justify sm:text-center">
+        Search our listings for a model that will satisfy your needs. Online
+        model booking is also available for incall and outcall services.
+      </p>
+      <div
+        class="
+          flex
+          justify-center
+          flex-wrap
+          pb-4
+          pt-4
+          sm:pt-4 sm:pb-10
+          lg:pb-14
+        "
       >
-      <div class="flex justify-center flex-wrap pb-4 pt-4 sm:pt-4 sm:pb-10 lg:pb-14">
         <button
           href=""
           v-for="category in categories"
@@ -136,9 +159,12 @@
 
     <div class="container mx-auto">
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-
-        <CardModel v-for="model in models" v-bind:key="model.name" v-bind:model="model" :modelo="model"/>
-
+        <CardModel
+          v-for="model in models"
+          v-bind:key="model.name"
+          v-bind:model="model"
+          :modelo="model"
+        />
       </div>
     </div>
   </div>
@@ -148,7 +174,9 @@
 import CardSlide from "@/components/card-slide.component.vue";
 import CardModel from "@/components/card-model.component.vue";
 
-import Categories from "@/assets/json/categorias.json"
+import Categories from "@/assets/json/categorias.json";
+import SlideModels from "@/assets/json/slide-models.json";
+import Models from "@/assets/json/models.json";
 
 let defaultTransform = 0;
 
@@ -156,112 +184,14 @@ export default {
   name: "Home",
   components: {
     CardSlide,
-    CardModel
+    CardModel,
   },
-  computed:{
-
-  },
+  computed: {},
   data() {
     return {
       categories: Categories,
-      
-      slideModels: [
-        {
-          name: "Juliana",
-          image: require("@/assets/images/models/juliana.jpg"),
-        },
-        {
-          name: "Chastity",
-          image: require("@/assets/images/models/chastity.jpg"),
-        },
-        {
-          name: "Olivia",
-          image: require("@/assets/images/models/olivia.jpg"),
-        },
-        {
-          name: "Kora",
-          image: require("@/assets/images/models/kora.jpg"),
-        },
-        {
-          name: "Eliza",
-          image: require("@/assets/images/models/eliza.jpg"),
-        },
-        {
-          name: "Michelle",
-          image: require("@/assets/images/models/michelle.jpg"),
-        },
-        {
-          name: "Lindsey",
-          image: require("@/assets/images/models/lindsey.jpg"),
-        },
-      ],
-      models: [
-        {
-          name: "MICHELLE",
-          image: require("@/assets/images/photos/MICHELLE.jpg"),
-        },
-        {
-          name: "FRANCESCA",
-          image: require("@/assets/images/photos/FRANCESCA.jpg"),
-        },
-        {
-          name: "SOPHIA",
-          image: require("@/assets/images/photos/SOPHIA.jpg"),
-        },
-        {
-          name: "ELIZA",
-          image: require("@/assets/images/photos/ELIZA.jpg"),
-        },
-        {
-          name: "HAILEY",
-          image: require("@/assets/images/photos/HAILEY.jpg"),
-        },
-        {
-          name: "MADELYN",
-          image: require("@/assets/images/photos/MADELYN.jpg"),
-        },
-        {
-          name: "JENNA",
-          image: require("@/assets/images/photos/JENNA.jpg"),
-        },
-        {
-          name: "ARIANA",
-          image: require("@/assets/images/photos/ARIANA.jpg"),
-        },
-        {
-          name: "LINDSEY",
-          image: require("@/assets/images/photos/LINDSEY.jpg"),
-        },
-        {
-          name: "SABRINA",
-          image: require("@/assets/images/photos/SABRINA.jpg"),
-        },
-        {
-          name: "JULIANA",
-          image: require("@/assets/images/photos/JULIANA.jpg"),
-        },
-        {
-          name: "VERONICA",
-          image: require("@/assets/images/photos/VERONICA.jpg"),
-        },
-        {
-          name: "KORA",
-          image: require("@/assets/images/photos/KORA.jpg"),
-        },
-        {
-          name: "OLIVIA",
-          image: require("@/assets/images/photos/OLIVIA.jpg"),
-        },
-        {
-          name: "REGINA",
-          image: require("@/assets/images/photos/REGINA.jpg"),
-        },
-        {
-          name: "CHASTITY",
-          image: require("@/assets/images/photos/CHASTITY.jpg"),
-        },
-      ],
-
+      slideModels: SlideModels,
+      models: Models,
     };
   },
   methods: {
