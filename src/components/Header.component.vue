@@ -1,140 +1,134 @@
 <template>
-  <header class="row">
-    <div class="container-logo">
-      <img width="215" height="50" src="@/assets/images/logo.png" alt="logo" />
-    </div>
-
-    <div class="menu-navigation">
-      <nav>
-        <ul>
-          <li>
-            <router-link to="/">INICIO</router-link>
-          </li>
-          <li>
-            <router-link to="/nosotros">NOSOTROS</router-link>
-          </li>
-          <li>
-            <router-link to="/contactanos">CONTÁCTANOS</router-link>
-          </li>
-        </ul>
+  <div id="nav">
+    <div class="container mx-auto">
+      <nav class="flex items-center justify-between flex-wrap p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <img
+            src="@/assets/images/as-logo2.png"
+            alt=""
+            class="width: max-content"
+          />
+        </div>
+        <div class="block lg:hidden">
+          <button
+            @click="abrirMenu"
+            class="
+              flex
+              items-center
+              px-3
+              py-2
+              border
+              rounded
+              text-gray-400
+              border-gray-400
+              hover:text-white hover:border-white
+            "
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="menuNav"
+          class="
+            w-full
+            flex-grow
+            lg:flex lg:items-center lg:w-auto lg:text-right
+            hidden
+          "
+        >
+          <div class="text-sm lg:flex-grow">
+            <a
+              href="#responsive-header"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                mr-4
+                text-gray-400
+                hover:text-white
+                text-base
+              "
+            >
+              Inicio
+            </a>
+            <a
+              href="#responsive-header"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                mr-4
+                text-gray-400
+                hover:text-white
+                text-base
+              "
+            >
+              Nosotros
+            </a>
+            <a
+              href="#responsive-header"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                text-gray-400
+                hover:text-white
+                text-base
+              "
+            >
+              Contacto
+            </a>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="
+                inline-block
+                px-4
+                py-2
+                leading-none
+                border
+                rounded
+                text-gray-400
+                border-gray-400
+                hover:border-transparent
+                mt-4
+                w-full
+                text-center
+                lg:mt-0 lg:ml-6
+                text-base
+                hover:text-white 
+                hover:border-white
+              "
+              >Login</a
+            >
+          </div>
+        </div>
       </nav>
     </div>
-
-    <div class="menu-bar">
-      <div class="count-likes">
-        <img width="48" height="48" src="@/assets/images/heart.svg" />
-        <span class="counter-likes">0</span>
-      </div>
-      <div class="container-items">
-        <img
-          class="hamburguer-button"
-          width="32"
-          src="@/assets/images/hamburguer.svg"
-          @click="openMenu()"
-        />
-        <div class="items-menu"></div>
-      </div>
-    </div>
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
-  setup() {
-    return {};
-  },
   methods: {
-    openMenu() {
-      console.log("abrir menú");
+    abrirMenu() {
+      console.log("click");
+      document.getElementById("menuNav").classList.toggle("hidden");
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
-header {
-  margin-right: none !important;
-  margin-left: none !important;
-  background: #0d0d0d;
-  display: flex !important;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 130px;
-  height: 130px;
-  .menu-navigation {
-    nav {
-      ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-          padding: 28px 35px;
-          color: #ffffff;
-          font-size: 16px;
-          position: relative;
-          a {
-            color: inherit !important;
-            text-decoration: none;
-            &.router-link-exact-active {
-              color: #e0006c !important;
-            }
-            &:hover {
-              color: #e0006c !important;
-            }
-          }
-          &:before {
-            content: "\2022";
-            position: absolute;
-            top: 48%;
-            left: 0;
-            margin-top: -13px;
-            color: #e0006c;
-            display: inline-block;
-            font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-  .menu-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    .count-likes {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 8px;
-      .counter-likes {
-        color: #ffffff;
-        font-size: 18px;
-      }
-    }
-    .container-items {
-      .hamburguer-button {
-        cursor: pointer;
-      }
-    }
-    .navbar-toggler {
-      border-color: transparent;
-      color: #ffffff;
-    }
-  }
-}
-
-@media (max-width: 1060px) {
-  header {
-    padding: 0px 100px;
-  }
-  .menu-navigation {
-    display: none;
-  }
-  .menu-bar{
-      padding-left: 3rem;
-  }
-  
+<style lang="scss">
+#nav {
+  background: #111;
 }
 </style>

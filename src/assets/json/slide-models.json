@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Juliana",
+      "image": "require('@/assets/images/models/juliana.jpg')"
+    },
+    {
+      "name": "Chastity",
+      "image": "require('@/assets/images/models/chastity.jpg')"
+    },
+    {
+      "name": "Olivia",
+      "image": "require('@/assets/images/models/olivia.jpg')"
+    },
+    {
+      "name": "Kora",
+      "image": "require('@/assets/images/models/kora.jpg')"
+    },
+    {
+      "name": "Eliza",
+      "image": "require('@/assets/images/models/eliza.jpg')"
+    },
+    {
+      "name": "Michelle",
+      "image": "require('@/assets/images/models/michelle.jpg')"
+    },
+    {
+      "name": "Lindsey",
+      "image": "require('@/assets/images/models/lindsey.jpg')"
+    }
+  ]

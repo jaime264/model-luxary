@@ -1,10 +1,19 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
-import MasonryWall from '@yeger/vue-masonry-wall'
-import "bootstrap/dist/css/bootstrap.css"
+import VueRouter from 'vue-router'
+import Routes from '@/router/index.js'
 
-const app = createApp(App)
+import './assets/tailwind.css'
 
-app.use(store).use(router).use(MasonryWall).mount('#app')
+Vue.use(VueRouter)
+
+var router = new VueRouter({
+  routes: Routes
+})
+
+Vue.config.productionTip = false
+
+new Vue({
+  render: h => h(App),
+  router:router
+}).$mount('#app')

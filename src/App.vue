@@ -1,34 +1,34 @@
 <template>
-  <div class="app">
-    <HeaderComponent/>
+  <div id="app">
+    <Header />
     <div class="main">
       <router-view/>
     </div>
-    <footer>
-    <FooterComponent />
-    </footer>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HeaderComponent from '@/components/Header.component.vue'
-import FooterComponent from '@/components/Footer.component.vue'
+import Header from "@/components/header.component.vue"
+import Footer from "@/components/footer.component.vue"
 
 export default {
+  name: "App",
   components: {
-    HeaderComponent,
-    FooterComponent
-  }
-}
+    Header,
+    Footer
+  },
+};
 </script>
 
 <style>
-@import '@/assets/scss/style.scss';
-.app{
-
-}
-.main{
-  width: 100%;
-  background: #1a1a1a;
+.main {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #111 !important;
+  min-height: 100vh;
 }
 </style>
