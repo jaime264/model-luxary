@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center m-2 ">
+  <div class="flex justify-center sm:m-2  lg:m-1">
     <div class="rounded-lg shadow-lg bg-white max-w-sm ">
       <a href="#!">
         <img class="" :src="letterIcon(modelo.image)" alt="" />
