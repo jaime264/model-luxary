@@ -141,6 +141,7 @@
           pt-4
           sm:pt-4 sm:pb-10
           lg:pb-14
+          
         "
       >
         <button
@@ -149,7 +150,7 @@
           v-bind:key="category.name"
           v-bind:category="category"
         >
-          <div class="text-white bg-neutral-600 w-24 leading-9 h-10 m-1.5">
+          <div class="text-white bg-neutral-600 w-24 leading-9 h-10 m-1.5 hover:bg-yellow-700">
             {{ category.name }}
           </div>
         </button>

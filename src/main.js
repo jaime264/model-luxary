@@ -8,12 +8,13 @@ import './assets/tailwind.css'
 Vue.use(VueRouter)
 
 var router = new VueRouter({
-  routes: Routes
+  routes: Routes,
+  mode: "history"
 })
 
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router:router
+  router: router
 }).$mount('#app')
