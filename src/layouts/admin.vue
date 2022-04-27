@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Header from "@/components/header.component.vue"
-import Footer from "@/components/footer.component.vue"
-import HeaderAdm from "@/components/admin/header.component.vue"
+import Header from "~/components/header.component.vue"
+import Footer from "~/components/footer.component.vue"
+import HeaderAdm from "~/components/admin/header.component.vue"
 
 
 export default {
