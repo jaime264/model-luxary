@@ -34,7 +34,7 @@
           <h2 class="text-white text-2xl">Navigation</h2>
           <hr class="p-1.5 border-gray-400">
 
-          <span class="block text-gray-400 text-base">Inicio</span>
+          <span class="block text-gray-400 text-base"><router-link to="/">Inicio</router-link></span>
           <hr class="p-1 border-gray-400">
           <span class="block text-gray-400 text-base">Nosotros</span>
           <hr class="p-1 border-gray-400">

@@ -45,7 +45,7 @@
         >
           <div class="text-sm lg:flex-grow">
             <a
-              href="#responsive-header"
+              href="/"
               class="
                 block
                 mt-4
@@ -88,7 +88,7 @@
           </div>
           <div>
             <a
-              href="#"
+              href="/panel"
               class="
                 inline-block
                 px-4

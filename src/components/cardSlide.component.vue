@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-shrink-0 relative w-full sm:w-auto text-center">
+    <router-link to="/modelo">
     <img
       :src="letterIcon(modelo.image)"
       alt="sitting area"
@@ -22,6 +23,7 @@
         </h3>
       </div>
     </div>
+    </router-link>
   </div>
 </template>
 

@@ -1,4 +1,5 @@
 <template>
+  <router-link to="/modelo">
   <div class="flex justify-center sm:m-2  lg:m-1">
     <div class="rounded-lg shadow-lg bg-white max-w-sm ">
       <a href="#!">
@@ -11,6 +12,7 @@
       </div>
     </div>
   </div>
+  </router-link>
 </template>
 
 <script>
